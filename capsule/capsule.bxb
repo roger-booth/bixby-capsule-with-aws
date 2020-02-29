@@ -1,19 +1,26 @@
 capsule {
-  id (tutorial.memory)
+  id (innercube.cubeops)
   version (0.1.0)
   format (3)
   targets {
-    target (bixby-mobile-en-US)
+    target (bixby-mobile-en)
   }
   permissions {
     bixby-user-id-access
   }
-  runtime-flags {
-    use-input-views-for-selection-list-detail
-    concepts-inherit-super-type-features
-    support-halt-effect-in-computed-inputs
-    modern-prompt-rejection
-    modern-default-view-behavior
-    no-filtering-with-validation
+  capsule-imports {
+    import (viv.core) {
+      as (core)
+    }
+  }
+  runtime-version (3)
+  store-sections {
+    section (Utilities)
+  }
+  device-models {
+    all
+  }
+  store-countries {
+    all
   }
 }
